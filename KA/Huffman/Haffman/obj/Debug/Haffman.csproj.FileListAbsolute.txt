@@ -1,0 +1,6 @@
+c:\users\tryuserpwnz\documents\visual studio 2013\Projects\Haffman\Haffman\bin\Debug\Haffman.exe.config
+C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\bin\Debug\Haffman.exe
+C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\bin\Debug\Haffman.pdb
+C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\obj\Debug\Haffman.csprojResolveAssemblyReference.cache
+C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\obj\Debug\Haffman.exe
+C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\obj\Debug\Haffman.pdb

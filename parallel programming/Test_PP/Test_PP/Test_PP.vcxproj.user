@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemoteDebuggerCommand>C:\Program Files\Microsoft HPC Pack 2008 SDK\Bin\mpiexec.exe</RemoteDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommandArguments>-n 5 $(TargetPath)</RemoteDebuggerCommandArguments>
+    <LocalDebuggerCommand>C:\Program Files\Microsoft HPC Pack 2008 SDK\Bin\mpiexec.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>-n 5 $(TargetPath)</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+</Project>
