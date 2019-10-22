@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+.main-interface {
+    display: grid;
+    width: 800px;
+    grid-template-columns: 200px 600px;
+    grid-template-rows: 80px 600px;
+    grid-template-areas:
+            "header header "
+            "left-menu main-game";
+    border: 4px solid #343434;
+}
+
+.header {
+    grid-area: header;
+    background-color: burlywood;
+    text-align: center;
+    border: solid #343434;
+    border-width: 0 0 4px 0;
+    width: 100%;
+
+}
+
+.left-menu {
+    grid-area: left-menu;
+    text-align: center;
+    border: solid #343434;
+    border-width: 0 4px 0 0;
+    background-color: burlywood;
+    font-size: 1.3rem;
+
+}
+
+.time {
+    border: solid #343434;
+    border-width: 0 0 4px 0;
+}
+
+.level {
+    border: solid #343434;
+    border-width: 0 0 4px 0;
+}
+
+.game-field {
+    grid-area: main-game;
+    display: grid;
+    padding: 2px;
+}
+
+.start {
+    width: 100px;
+    height: 100px;
+    margin-top: 60px;
+}
+
+.square {
+    size: auto;
+    margin: 1px;
+}
