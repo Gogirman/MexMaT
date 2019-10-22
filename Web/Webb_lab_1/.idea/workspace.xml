@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="716c6832-e030-42e0-b0a8-20ee7e7bf634" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1RYaYqW0ixOMhbMaFc3WGr1jvxP" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/styles" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TryUserPWNZ\WebstormProjects\untitled\styles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TryUserPWNZ\WebstormProjects\untitled\Cats" />
+      <recent name="C:\Users\TryUserPWNZ\WebstormProjects\untitled" />
+      <recent name="C:\Users\TryUserPWNZ\WebstormProjects\untitled\styles" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="716c6832-e030-42e0-b0a8-20ee7e7bf634" name="Default Changelist" comment="" />
+      <created>1569846535546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569846535546</updated>
+      <workItem from="1569846545037" duration="4100000" />
+      <workItem from="1569921898024" duration="13072000" />
+      <workItem from="1570186636823" duration="9402000" />
+      <workItem from="1570247470974" duration="963000" />
+      <workItem from="1570292928793" duration="21510000" />
+      <workItem from="1570617456287" duration="937000" />
+      <workItem from="1570804830387" duration="2186000" />
+      <workItem from="1570850302753" duration="4245000" />
+      <workItem from="1570856814427" duration="2031000" />
+      <workItem from="1570859027542" duration="59000" />
+      <workItem from="1571299191343" duration="1552000" />
+      <workItem from="1571330315101" duration="227000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
