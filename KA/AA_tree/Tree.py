@@ -6,8 +6,6 @@ class Node(object):
         self.right = right
 
 
-
-
 class Tree(object):
     def __init__(self):
         self.root = None
