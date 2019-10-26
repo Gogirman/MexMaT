@@ -47,6 +47,40 @@ namespace Huffman
                 Table[current_node.ch] = code;
             }
         }
+
+        private void huffman_node_min_find(List<HuffmanTree> huffman_node, ref int min1, ref int min2)
+        {
+            if (huffman_node[0].freq < huffman_node[1].freq)
+            {
+                min1 = 0;
+                min2 = 1;
+            }
+            else
+            {
+                min1 = 1;
+                min2 = 0;
+            }
+
+            int temp;
+            for (int i = 2; i < huffman_node.Count; i++)
+            {
+                if (huffman_node[i].freq < huffman_node[min1].freq)
+                {
+                    temp = min1;
+                    min1 = i;
+                    if (huffman_node[temp].freq < huffman_node[min2].freq) 
+                        min2 = temp;
+                }
+                else
+                {
+                    if (huffman_node[i].freq < huffman_node[min2].freq) 
+                        min2 = i;
+                }
+            }
+
+        }
+
+
         public HuffmanInfo(string fileName)
         {
             // Храним все считанные частоты
@@ -77,15 +111,23 @@ namespace Huffman
             huffman_node.Add(new HuffmanTree('\0', 0));
             // TODO: построить дерево кода Хаффмана путем последовательного объединения листьев
             // Сортируем вершины
-            huffman_node = (from node in huffman_node orderby node.freq select node).ToList();
-
+            // huffman_node = (from node in huffman_node orderby node.freq select node).ToList();
+            int min1 = -1, min2 = -1;
             while (huffman_node.Count > 1)
             {
                 // ***TODO: перенести эту сортировку
-                
-                var new_node = new HuffmanTree(huffman_node[0], huffman_node[1]);
-                huffman_node.RemoveAt(1);
-                huffman_node.RemoveAt(0);
+                huffman_node_min_find(huffman_node, ref min1, ref min2);
+                var new_node = new HuffmanTree(huffman_node[min1], huffman_node[min2]);
+                if (min1 > min2)
+                {
+                    huffman_node.RemoveAt(min1);
+                    huffman_node.RemoveAt(min2);
+                }
+                else
+                {
+                    huffman_node.RemoveAt(min2);
+                    huffman_node.RemoveAt(min1);
+                }
                 huffman_node.Add(new_node);
             }
             Tree = huffman_node[0];
@@ -102,14 +144,12 @@ namespace Huffman
             while ((line = sr.ReadLine()) != null)
             {
                 // TODO: посимвольно обрабатываем строку, кодируем, пишем в sw
-                string code = "";
                 // ***TODO: убрать эту буферизацию
                 foreach (char symbol in line)
                 {
-                    code += Table[symbol];
+                    sw.WriteWord(Table[symbol]);
                 }
-                code += Table['\n'];
-                sw.WriteWord(code);
+                sw.WriteWord(Table['\n']);
             }
             sr.Close();
             sw.WriteWord(Table['\0']); // записываем признак конца файла
@@ -119,28 +159,34 @@ namespace Huffman
         {
             var sr = new ArchReader(archFile); // нужно побитовое чтение
             var sw = new StreamWriter(txtFile, false, Encoding.Unicode);
-            byte curBit; string code = "";
+            byte curBit;
+            HuffmanTree curNodeTree = Tree;
             while (sr.ReadBit(out curBit))
             {
                 // TODO: побитово (!) разбираем архив
-                if (curBit == 0)
-                {
-                    code += "0";
-                }
-                else if (curBit == 1)
-                {
-                    code += "1";
-                }
-
-                if (Table.ContainsValue(code))
+                if (curNodeTree.left == null && curNodeTree.rigth == null)
                 {
                     // ***TODO: это все заменить на поиск по поддереву
-                    char symbol = Table.Where(x => x.Value == code).FirstOrDefault().Key;
+                    char symbol = curNodeTree.ch;
                     if (symbol != '\0')
                     {
                         sw.Write(symbol);
-                        code = "";
+                        curNodeTree = Tree;
                     }
+                    else
+                    {
+                        sr.Finish();
+                        sw.Close();
+                        return;
+                    }
+                }
+                if (curBit == 0)
+                {
+                    curNodeTree = curNodeTree.left;
+                }
+                else if (curBit == 1)
+                {
+                    curNodeTree = curNodeTree.rigth;
                 }
             }
             sr.Finish();
