@@ -4,3 +4,9 @@ C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\bin\D
 C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\obj\Debug\Haffman.csprojResolveAssemblyReference.cache
 C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\obj\Debug\Haffman.exe
 C:\Users\TryUserPWNZ\documents\visual studio 2013\Projects\Haffman\Haffman\obj\Debug\Haffman.pdb
+C:\Users\TryUserPWNZ\AppData\Local\gitkraken\app-6.3.0\MexMaT\KA\Huffman\Haffman\bin\Debug\Haffman.exe.config
+C:\Users\TryUserPWNZ\AppData\Local\gitkraken\app-6.3.0\MexMaT\KA\Huffman\Haffman\obj\Debug\Haffman.exe
+C:\Users\TryUserPWNZ\AppData\Local\gitkraken\app-6.3.0\MexMaT\KA\Huffman\Haffman\obj\Debug\Haffman.pdb
+C:\Users\TryUserPWNZ\AppData\Local\gitkraken\app-6.3.0\MexMaT\KA\Huffman\Haffman\bin\Debug\Haffman.exe
+C:\Users\TryUserPWNZ\AppData\Local\gitkraken\app-6.3.0\MexMaT\KA\Huffman\Haffman\bin\Debug\Haffman.pdb
+C:\Users\TryUserPWNZ\AppData\Local\gitkraken\app-6.3.0\MexMaT\KA\Huffman\Haffman\obj\Debug\Haffman.csprojResolveAssemblyReference.cache

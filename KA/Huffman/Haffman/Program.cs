@@ -76,11 +76,13 @@ namespace Huffman
             // Частота такого символа, очевидно, должна быть очень маленькой, т.к. такой символ встречается только 1 раз во всем файле (можно даже сделать частоту = 0)
             huffman_node.Add(new HuffmanTree('\0', 0));
             // TODO: построить дерево кода Хаффмана путем последовательного объединения листьев
+            // Сортируем вершины
+            huffman_node = (from node in huffman_node orderby node.freq select node).ToList();
+
             while (huffman_node.Count > 1)
             {
-                huffman_node = (from node in huffman_node
-                                orderby node.freq
-                                select node).ToList();
+                // ***TODO: перенести эту сортировку
+                
                 var new_node = new HuffmanTree(huffman_node[0], huffman_node[1]);
                 huffman_node.RemoveAt(1);
                 huffman_node.RemoveAt(0);
@@ -101,6 +103,7 @@ namespace Huffman
             {
                 // TODO: посимвольно обрабатываем строку, кодируем, пишем в sw
                 string code = "";
+                // ***TODO: убрать эту буферизацию
                 foreach (char symbol in line)
                 {
                     code += Table[symbol];
@@ -131,9 +134,13 @@ namespace Huffman
 
                 if (Table.ContainsValue(code))
                 {
+                    // ***TODO: это все заменить на поиск по поддереву
                     char symbol = Table.Where(x => x.Value == code).FirstOrDefault().Key;
-                    sw.Write(symbol);
-                    code = "";
+                    if (symbol != '\0')
+                    {
+                        sw.Write(symbol);
+                        code = "";
+                    }
                 }
             }
             sr.Finish();
