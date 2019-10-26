@@ -17,10 +17,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ara_ara" />
+  </component>
   <component name="ProjectId" id="1SL6UJEfC5BMqypjOVRgER8djkL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -51,11 +56,27 @@
       <option name="presentableId" value="Default" />
       <updated>1571330542264</updated>
       <workItem from="1571330543602" duration="4028000" />
-      <workItem from="1571565364426" duration="43833000" />
+      <workItem from="1571565364426" duration="44567000" />
+      <workItem from="1572002880132" duration="40000" />
+      <workItem from="1572003306345" duration="785000" />
+      <workItem from="1572059927409" duration="1516000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

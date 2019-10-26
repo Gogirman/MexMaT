@@ -128,7 +128,7 @@ NAVBAR ELEMENTS
 
 
 .parent:hover {
-    background-color: red;
+    background-color: #aaaaaa;
 }
 
 .content-menu-item-li:hover:before{

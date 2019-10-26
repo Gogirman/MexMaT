@@ -81,18 +81,10 @@ function squareClick() {
 
 function startGame() {
     alert('Чтобы начать игру нажмите!!!');
-    time = 100;
+    clearInterval(timer);
+    time = 8;
     level = 1;
     document.getElementById("level").innerHTML = level;
     squareSplit();
     timer = setInterval(timeTick, 1000);
 }
-
-/*
-<div onclick="func()"
-     style="cursor: pointer;
-         background-color: aqua;
-         width: 10px;
-         height: 10px">
-</div>
- */
