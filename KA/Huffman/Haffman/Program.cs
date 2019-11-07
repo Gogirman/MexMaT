@@ -168,7 +168,12 @@ namespace Huffman
                 {
                     // ***TODO: это все заменить на поиск по поддереву
                     char symbol = curNodeTree.ch;
-                    if (symbol != '\0')
+                    if (symbol == '\n')
+                    {
+                        sw.WriteLine();
+                        curNodeTree = Tree;
+                    }
+                    else if (symbol != '\0')
                     {
                         sw.Write(symbol);
                         curNodeTree = Tree;
