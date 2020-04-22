@@ -1,3 +1,6 @@
-.idea/
+Server/venv/
+Server/.idea/
 
-node_modules/
+
+Client/.idea/
+Client/node_modules/
