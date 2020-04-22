@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block extrajs %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<style>
+
+    body {
+        background: url(/static/images/wall.jpg) left bottom no-repeat;
+        min-height: 1000px;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .header-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 25% 25% 25% 0;
+        border: 2px solid;
+        float: left;
+        margin: 2%;
+    }
+
+    .jumbotron {
+        min-height: 100px;
+    }
+
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        float: inherit;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        display:none;
+    }
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input.success:checked + .slider {
+        background-color: #8bc34a;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+</style>
+</head>
+<body>
+
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <img src="{% static "images/kotik.jpg" %}" class="header-img">
+        <h1 class="display-3">ToDo List</h1>
+        <H3 class="display-6">{{hello_text}}.</H3>
+      </div>
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

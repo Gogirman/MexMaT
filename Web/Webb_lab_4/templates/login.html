@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Вход {% endblock %}
+{% block content %}
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        <H2> Введите логин и пароль </H2>
+        <form method="post">
+            <table>
+                {{ form }}
+            </table>
+            {% csrf_token %}
+            <button type="submit" value="Войти" class="btn btn-dark"> Войти </button>
+        </form>
+
+        <br>
+
+        <a href="registration.html" class="reg-link">
+            <button class="btn btn-dark"> Регистрация </button>
+        </a>
+        </div>
+    </div>
+{% endblock %}

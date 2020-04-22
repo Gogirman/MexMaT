@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %} Просмотр задачи {% endblock %}
+{% block content %}
+
+    <div class="card" id="{{ todo.id }}">
+        <div class="card-body">
+            <div>
+                <h1 class="card-title">{{ todo.name }}</h1>
+                <p class="card-text">
+                    {{ todo.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" >
+        <div class="row">
+
+            <div class="col" id="comments_list">
+                {# Комментарии #}
+            </div>
+
+            <div class="col"> </div>
+
+            <div class="col">
+                <a href="back_todos_list" class="reg-link">
+                    <button class="btn btn-dark btn-block btn-lg"> Назад </button>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extrajs %}
+    <script defer src="{% static 'script_comments.js' %}"></script>
+{% endblock %}

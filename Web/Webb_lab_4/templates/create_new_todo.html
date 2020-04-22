@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Новая задача {% endblock %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Новая задача</h1>
+            <p> Введите название задачи и ее описание: </p>
+            <form method="post">
+                {% csrf_token %}
+                <table>
+                    {{ form1 }}
+                </table>
+                <button type="submit" value="Создать!" class="btn btn-dark"> Создать </button>
+            </form>
+            <br>
+            <a href="back_todos_list" class="reg-link">
+                <button class="btn btn-dark "> Назад </button>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

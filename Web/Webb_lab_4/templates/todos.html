@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %} ToDos {% endblock %}
+{% block extrajs %}
+    <script  src="{% static 'script.js' %}"></script>
+    <script  src="{% static 'script_filter.js' %}"></script>
+{% endblock %}
+{% block content %}
+    <h1>Добрый день, {{ login }}!!!</h1>
+
+
+    <div class="input-group" style="margin-bottom: 15px">
+
+        <input id="search" type="text"
+               onchange="filter_todo()"
+               oninput="filter_todo()"
+               class="form-control form-control-lg" placeholder="Поиск...">
+
+        <div class="input-group-append" style="width: 15%">
+            <button id="dropdown-button"
+                    class="btn btn-outline-secondary dropdown-toggle"
+                    style = "width: 100%" type="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All</button>
+            <ul id="dropdown-list" class="dropdown-menu">
+                <li class="dropdown-item" onclick="filter_todo('All')">All</li>
+                <li class="dropdown-item" onclick="filter_todo('Done')">Done</li>
+                <li class="dropdown-item" onclick="filter_todo('Not done')">Not done</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <h2>Задачки:</h2>
+
+    <div id="todo-list">
+        {% for todo in todos %}
+
+            <div class="card" id="todo_{{ todo.id }}">
+              <div class="card-body">
+
+                  {% if todo.is_complete %}
+                      <del>
+                          <div id="todo_text_{{ todo.id }}" >
+                            <h5 class="card-title">{{ todo.name }}</h5>
+                            <p class="card-text">
+                                {{ todo.description }}
+                            </p>
+                          </div>
+                      </del>
+                  {% else %}
+                      <div id="todo_text_{{ todo.id }}" >
+                        <h5 class="card-title">{{ todo.name }}</h5>
+                        <p class="card-text">
+                            {{ todo.description }}
+                        </p>
+                      </div>
+                  {% endif %}
+
+                  <div >
+                    <label class="switch">
+                        <input type="checkbox" class="success" id="check_{{ todo.id }}"
+                        {% if todo.is_complete %}
+                        checked disabled {% endif %} onclick="change_check({{ todo.id }})">
+                        <span class="slider"></span>
+                    </label>
+                  </div>
+
+
+                  <a href="edit_todo/{{ todo.id }}">
+                      <input type="button" value="Информация"
+                             class="btn btn-dark btn-lg btn-block">
+                  </a>
+
+                  <button class="btn btn-danger btn-lg btn-block"
+                          onclick="delete_todo({{ todo.id }})"> Удалить
+                  </button>
+
+              </div>
+            </div>
+
+
+
+        {% empty %}
+
+        <h2 align="center">У вас нет задач...</h2>
+
+        {% endfor %}
+
+        <br>
+
+    </div>
+
+    <a href="create_new_todo.html">
+        <input type="button" value="Создать новую задачу"
+               class="btn btn-success btn-lg btn-block">
+    </a> <br>
+    <a href="log_out">
+        <input type="button" value="Выйти"
+               class="btn btn-secondary btn-lg btn-block">
+    </a> <br>
+{% endblock %}
+
