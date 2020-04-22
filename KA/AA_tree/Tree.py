@@ -17,14 +17,13 @@ class Tree(object):
         elif t.left is None:
             return t
         elif t.left.level == t.level:
-            return Node(
-                t.left.value,
-                t.left.level,
-                t.left.left,
-                Node(t.value, t.level, t.left.right, t.right)
-            )
-        else:
-            return t
+
+            l = t.left
+            l, t = t, l
+            l.left = t.right
+            t.right = l
+
+        return t
 
     # Устранение двух правых связей на одном уровне
     def _split(self, t):
@@ -33,14 +32,14 @@ class Tree(object):
         elif t.right is None or t.right.right is None:
             return t
         elif t.level == t.right.right.level:
-            return Node(
-                t.right.value,
-                t.right.level + 1,
-                Node(t.value, t.level, t.left, t.right.left),
-                t.right.right
-            )
-        else:
-            return t
+
+            r = t.right
+            t, r = r, t
+            r.right = t.left
+            t.left = r
+            t.level += 1
+
+        return t
 
     def _insert(self, value, t):
         if t is None:

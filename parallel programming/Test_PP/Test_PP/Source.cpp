@@ -1,4 +1,4 @@
-// MPfirst.cpp: определяет точку входа для консольного приложения.
+// MPfirst.cpp: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 //
 
 #include<mpi.h>
@@ -10,7 +10,7 @@ using namespace std;
 // I = integrate e^(2x) dx 1..2
 // I = 23.605
 
-int main(int argc, char **argv) {
+int _main(int argc, char **argv) {
 	int rank, size;
 	const int N = 1000;
 	MPI_Init(&argc, &argv);
@@ -56,7 +56,7 @@ int main(int argc, char **argv) {
 }
 
 /*
-// Часть 1
+// пїЅпїЅпїЅпїЅпїЅ 1
 int main(int argc, char **argv)
 {
 int rank, size;
@@ -73,7 +73,7 @@ return 0;
 }*/
 
 /*
-// Часть 2
+// пїЅпїЅпїЅпїЅпїЅ 2
 int main(int argc, char **argv)
 {
 int rank, size;
@@ -91,7 +91,7 @@ if (rank == 3) {
 cout << "Current rank: " << rank << endl;
 char recv;
 MPI_Status stat;
-// Лучше использовать MPI_Prob
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ MPI_Prob
 MPI_Recv(&recv, 30, MPI_CHAR, 1, 1, MPI_COMM_WORLD, &stat);
 cout << "Message: " << recv << endl;
 }
@@ -101,7 +101,7 @@ return 0;
 }*/
 
 /*
-// Часть 3
+// пїЅпїЅпїЅпїЅпїЅ 3
 int main(int argc, char **argv)
 {
 int rank, size;
@@ -136,7 +136,7 @@ return 0;
 */
 
 /*
-// Часть 4 ФИКСИТЬ
+// пїЅпїЅпїЅпїЅпїЅ 4 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 void send(int send, int from, int to) {
 cout << "Current rank: " << from << endl;
 cout << "Current MESSAGE = " << send << endl;
@@ -202,7 +202,7 @@ return 0;
 */
 
 /*
-// Часть 5
+// пїЅпїЅпїЅпїЅпїЅ 5
 int main(int argc, char **argv) {
 int rank, size;
 int N = 1000;
@@ -236,7 +236,7 @@ return 0;
 */
 
 /*
-// Часть 7
+// пїЅпїЅпїЅпїЅпїЅ 7
 int main(int argc, char **argv) {
 int rank, size;
 int N = 1000;
@@ -278,7 +278,7 @@ return 0;
 */
 
 /*
-// Часть 8
+// пїЅпїЅпїЅпїЅпїЅ 8
 int main(int argc, char **argv) {
 int rank, size;
 const int N = 1000;
@@ -322,7 +322,7 @@ return 0;
 */
 
 /*
-// Часть 9
+// пїЅпїЅпїЅпїЅпїЅ 9
 double y(double x) {
 return exp(2 * x);
 }
@@ -363,11 +363,11 @@ return 0;
 */
 
 /*
-// Часть 10
+// пїЅпїЅпїЅпїЅпїЅ 10
 
 */
 
 /*
-// Часть 11
+// пїЅпїЅпїЅпїЅпїЅ 11
 
 */
